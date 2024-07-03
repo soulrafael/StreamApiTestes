@@ -13,6 +13,12 @@ public class ConsumerTest {
                 System.out.println(numero);
             }
         };
+        Consumer<Integer> numerosImpar = numero -> {
+            if (numero%2==1) {
+                System.out.println(numero);
+            }
+        };
         lista.stream().forEach(numerosPar);
+        lista.stream().forEach(numerosImpar);
     }
 }
